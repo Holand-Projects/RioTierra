@@ -1,0 +1,311 @@
+---
+title: Rio Tierra Real Estate
+description: Premium real estate developments and residential communities
+permalink: /
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rio Tierra Real Estate - Premium residential developments and exclusive communities">
+  <meta name="keywords" content="Rio Tierra, real estate, residential development, premium communities">
+  <meta name="author" content="Rio Tierra Real Estate">
+  
+  <meta property="og:title" content="Rio Tierra Real Estate">
+  <meta property="og:description" content="Premium residential developments and exclusive communities">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/RIO TIERRA (1).webp">
+  
+  <link rel="icon" type="image/webp" href="/RIO TIERRA (1).webp">
+  <link rel="preload" href="/RIO TIERRA (1).webp" as="image" fetchpriority="high">
+  
+  <title>Rio Tierra Real Estate</title>
+  
+  <style>
+    :root {
+      --primary: #c1743c;
+      --primary-dark: #a85e2d;
+      --text-dark: #2c3e50;
+      --white: #ffffff;
+      --background: #f9f5f0;
+      --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.08);
+      --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.12);
+      --gradient-accent: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+      background: var(--background);
+      color: var(--text-dark);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(193, 116, 60, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(193, 116, 60, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    .logo-container {
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    .logo-container::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      right: -30px;
+      bottom: -30px;
+      background: radial-gradient(circle, rgba(193, 116, 60, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+    }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      position: relative;
+      z-index: 1;
+      transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      filter: drop-shadow(0 8px 32px rgba(193, 116, 60, 0.3));
+    }
+
+    .logo:hover {
+      transform: translateY(-8px) rotate(2deg);
+      filter: drop-shadow(0 16px 48px rgba(193, 116, 60, 0.4));
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-accent);
+      color: var(--white);
+      text-decoration: none;
+      padding: 1.5rem 3rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      letter-spacing: 0.5px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      border: 1px solid rgba(193, 116, 60, 0.3);
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.8s ease;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-strong);
+      border-color: rgba(193, 116, 60, 0.6);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #8a4d1f 100%);
+    }
+
+    .cta-button:active {
+      transform: translateY(-2px);
+    }
+
+    .cta-icon {
+      margin-left: 0.75rem;
+      font-size: 1.2rem;
+      transition: transform 0.4s ease;
+    }
+
+    .cta-button:hover .cta-icon {
+      transform: translateX(6px);
+    }
+
+    .floating-elements {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .floating-element {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(193, 116, 60, 0.3);
+      border-radius: 50%;
+      animation: float 20s linear infinite;
+    }
+
+    .floating-element:nth-child(1) {
+      left: 10%;
+      animation-delay: 0s;
+      animation-duration: 25s;
+    }
+
+    .floating-element:nth-child(2) {
+      left: 20%;
+      animation-delay: 5s;
+      animation-duration: 30s;
+    }
+
+    .floating-element:nth-child(3) {
+      left: 70%;
+      animation-delay: 10s;
+      animation-duration: 20s;
+    }
+
+    .floating-element:nth-child(4) {
+      left: 80%;
+      animation-delay: 15s;
+      animation-duration: 35s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      .logo-container {
+        margin-bottom: 3rem;
+      }
+
+      .logo {
+        width: 150px;
+        height: 150px;
+      }
+
+      .cta-button {
+        padding: 1.25rem 2.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .cta-button {
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-elements">
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+  </div>
+
+  <main class="container">
+    <div class="logo-container">
+      <img 
+        src="/RIO TIERRA (1).webp" 
+        alt="Rio Tierra Real Estate" 
+        class="logo"
+        width="180" 
+        height="180"
+      >
+    </div>
+
+    <a href="/sales/" class="cta-button">
+      <span>Explore Sales</span>
+      <span class="cta-icon">→</span>
+    </a>
+  </main>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rio Tierra Real Estate",
+    "url": "https://riotierra.com",
+    "logo": "https://riotierra.com/RIO TIERRA (1).webp",
+    "description": "Premium residential developments and exclusive communities"
+  }
+  </script>
+</body>
+</html>
